@@ -1,0 +1,6 @@
+{application, vsn_transform,
+ [{description, "Apply git vsn to modules"},
+  {vsn, git},
+  {modules, []},
+  {registered, []},
+  {applications, [kernel, stdlib]}]}.
