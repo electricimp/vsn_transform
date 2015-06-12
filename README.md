@@ -28,6 +28,16 @@ We specify it as follows:
 
 ...where `BASE_DIR` is an environment variable set in the top-level Makefile.
 
+## Did it work?
+
+You can check it with the following:
+
+    lists:map(
+        fun({Mod, Path}) ->
+            Vsn = proplists:get_value(vsn, Mod:module_info(attributes)),
+            {Mod, Vsn} 
+        end, code:all_loaded()).
+
 ## License
 
 Apache 2.0
