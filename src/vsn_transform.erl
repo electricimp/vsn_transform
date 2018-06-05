@@ -27,4 +27,7 @@ apply_vsn(false, VsnAttr,
            {attribute, _, module, _M} = ModuleAttr | Rest]) ->
     % We know that file and module have to come first; we want to insert
     % immediately afterwards, so we can get away with this:
-    [FileAttr, ModuleAttr, VsnAttr | Rest].
+    [FileAttr, ModuleAttr, VsnAttr | Rest];
+apply_vsn(false, _VsnAttr, _Forms) ->
+    % Does your source file have a module attribute?
+    error(no_module_attribute).
