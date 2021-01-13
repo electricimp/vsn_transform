@@ -24,8 +24,8 @@ apply_vsn(Forms, Vsn) ->
                   (_) -> false
                end, Forms),
     % Lie about the line number, so we don't offset everything else.
-    Line = 1,
-    VsnAttr = {attribute, Line, vsn, Vsn},
+    Anno = erl_anno:new(1),
+    VsnAttr = {attribute, Anno, vsn, Vsn},
     apply_vsn(HasVsn, VsnAttr, Forms).
 
 apply_vsn(true, _VsnAttr, Forms) ->
