@@ -1,6 +1,6 @@
 PROJECT = erlang_mk
 PROJECT_DESCRIPTION = New project
-PROJECT_VERSION = 1.1.5
+PROJECT_VERSION = 1.0.2
 
 BUILD_DEPS = vsn_transform
 dep_vsn_transform = git https://github.com/rlipscombe/vsn_transform.git

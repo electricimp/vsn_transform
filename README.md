@@ -5,7 +5,7 @@ Erlang parse transform to add `-vsn` attributes from (e.g.) git.
 ## Motivation
 
 By default, an Erlang module has a `vsn` attribute that's the MD5 checksum of the module. You'd probably prefer
-something easier to read, such as `1.0.3`. You can control this version by adding a `-vsn` module attribute, for
+something easier to read, such as `1.0.2`. You can control this version by adding a `-vsn` module attribute, for
 example:
 
 ```erlang
