@@ -1,0 +1,11 @@
+case os:getenv("GIT_VSN") of
+    false -> CONFIG;
+    [] -> CONFIG;
+    Vsn ->
+        case lists:keyfind(erl_opts, 1, CONFIG) of
+            false -> CONFIG;
+            {erl_opts, Opts} ->
+                NewOpts = lists:keystore(vsn, 1, Opts, {vsn, Vsn}),
+                lists:keystore(erl_opts, 1, CONFIG, {erl_opts, NewOpts})
+        end
+end.
