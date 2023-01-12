@@ -23,7 +23,7 @@ Add it to your `rebar.config` file, as follows:
 
     {deps, [
         {vsn_transform, ".*",
-            {git, "https://github.com/rlipscombe/vsn_transform.git"}}
+            {git, "https://github.com/electricimp/vsn_transform.git"}}
     ]}.
 
     {erl_opts, [
